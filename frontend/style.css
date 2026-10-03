@@ -1,0 +1,724 @@
+/* ======================================
+   CONFIGURACIÓN GENERAL
+====================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1d2939;
+  min-height: 100vh;
+}
+
+
+/* ======================================
+   CABECERA
+====================================== */
+
+.header {
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #1e3a8a
+  );
+
+  padding: 55px 20px 95px;
+  color: white;
+}
+
+.header-content {
+  width: 92%;
+  max-width: 980px;
+  margin: auto;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 7px 13px;
+  margin-bottom: 16px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+}
+
+.header p {
+  margin: 10px 0 0;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+
+/* ======================================
+   CONTENEDOR
+====================================== */
+
+.container {
+  width: 92% !important;
+  max-width: 980px !important;
+
+  margin:
+    -55px auto 40px !important;
+
+  padding: 0 !important;
+}
+
+
+/* ======================================
+   TARJETAS
+====================================== */
+
+.card {
+  background: white !important;
+
+  border-radius: 16px !important;
+
+  padding: 26px !important;
+
+  margin-bottom: 22px !important;
+
+  border:
+    1px solid #e5e7eb !important;
+
+  box-shadow:
+    0 8px 28px
+    rgba(15, 23, 42, 0.07) !important;
+}
+
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.card-title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card-title span {
+  display: block;
+  margin-top: 3px;
+
+  font-size: 13px;
+  color: #98a2b3;
+}
+
+
+/* ======================================
+   ICONOS
+====================================== */
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* ======================================
+   SUBIR ARCHIVO
+====================================== */
+
+#formTarea {
+  margin-top: 23px;
+}
+
+.file-selector {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  border:
+    2px dashed #d0d5dd;
+
+  border-radius: 12px;
+
+  background: #fafbfc;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.file-selector:hover {
+  border-color: #2563eb;
+  background: #f5f9ff;
+}
+
+.file-selector input {
+  display: none;
+}
+
+.file-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.file-content strong {
+  font-size: 14px;
+  color: #344054;
+}
+
+.file-content span {
+  margin-top: 4px;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.select-button {
+  flex-shrink: 0;
+
+  padding: 9px 14px;
+
+  border-radius: 8px;
+
+  background: white;
+
+  border:
+    1px solid #d0d5dd;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #344054;
+}
+
+
+/* ======================================
+   BOTÓN SUBIR
+====================================== */
+
+.btn-primary-custom {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  box-shadow:
+    0 4px 12px
+    rgba(37, 99, 235, 0.15);
+}
+
+.btn-primary-custom:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* ======================================
+   BOTÓN ACTUALIZAR
+====================================== */
+
+.btn-refresh {
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 9px 13px;
+
+  background: #f2f4f7;
+
+  color: #475467;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-refresh:hover {
+  background: #e4e7ec;
+}
+
+
+/* ======================================
+   MENSAJES
+====================================== */
+
+#mensaje {
+  display: none;
+
+  margin-top: 14px;
+
+  padding: 11px 14px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+#mensaje.success {
+  display: block;
+
+  background: #ecfdf3;
+
+  color: #027a48;
+
+  border:
+    1px solid #abefc6;
+}
+
+#mensaje.error {
+  display: block;
+
+  background: #fef3f2;
+
+  color: #b42318;
+
+  border:
+    1px solid #fecdca;
+}
+
+#mensaje.info {
+  display: block;
+
+  background: #eff8ff;
+
+  color: #175cd3;
+
+  border:
+    1px solid #b2ddff;
+}
+
+
+/* ======================================
+   ENCABEZADO DEL LISTADO
+====================================== */
+
+.list-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 17px;
+}
+
+
+/* ======================================
+   LISTA DE TAREAS
+====================================== */
+
+.task-list {
+  border-top:
+    1px solid #eaecf0;
+}
+
+.task-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 2px;
+
+  border-bottom:
+    1px solid #eaecf0;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-data {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+
+/* ======================================
+   ARCHIVOS
+====================================== */
+
+.file-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f2f4f7;
+
+  color: #475467;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.file-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #101828;
+
+  overflow-wrap: anywhere;
+}
+
+.file-details {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 4px;
+
+  font-size: 11px;
+
+  color: #98a2b3;
+}
+
+
+/* ======================================
+   BOTONES DESCARGAR / ELIMINAR
+====================================== */
+
+.actions {
+  display: flex;
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.btn-download,
+.btn-delete {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 8px 12px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn-download {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.btn-download:hover {
+  background: #d1fadf;
+}
+
+.btn-delete {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.btn-delete:hover {
+  background: #fee4e2;
+}
+
+
+/* ======================================
+   CUANDO NO HAY ARCHIVOS
+====================================== */
+
+.empty {
+  text-align: center;
+
+  padding: 38px 20px;
+
+  color: #98a2b3;
+}
+
+.empty-icon {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.empty strong {
+  display: block;
+
+  color: #475467;
+
+  font-size: 14px;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+  padding: 5px 20px 30px;
+
+  text-align: center;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+
+/* ======================================
+   MODAL BOOTSTRAP
+====================================== */
+
+.modal-eliminar {
+  border: none !important;
+
+  border-radius: 18px !important;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 70px
+    rgba(15, 23, 42, 0.28);
+}
+
+.modal-header {
+  padding:
+    22px 24px 10px !important;
+}
+
+.modal-title {
+  font-weight: 700;
+  color: #101828;
+}
+
+.modal-body-custom {
+  padding:
+    15px 24px 10px !important;
+
+  text-align: center;
+}
+
+.delete-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    0 auto 17px;
+
+  border-radius: 50%;
+
+  background: #fef3f2;
+
+  color: #d92d20;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.modal-body-custom h6 {
+  margin-bottom: 14px;
+
+  font-weight: 600;
+
+  color: #344054;
+}
+
+.archivo-eliminar-box {
+  padding: 12px 15px;
+
+  border-radius: 9px;
+
+  background: #f9fafb;
+
+  border:
+    1px solid #eaecf0;
+
+  color: #101828;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+.texto-advertencia {
+  margin:
+    12px 0 0;
+
+  font-size: 12px;
+
+  color: #98a2b3;
+}
+
+.modal-footer {
+  padding:
+    14px 24px 22px !important;
+
+  gap: 8px;
+}
+
+.btn-cancelar-modal,
+.btn-eliminar-modal {
+  border: none;
+
+  border-radius: 8px;
+
+  padding:
+    10px 16px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-cancelar-modal {
+  background: #f2f4f7;
+
+  color: #344054;
+}
+
+.btn-cancelar-modal:hover {
+  background: #e4e7ec;
+}
+
+.btn-eliminar-modal {
+  background: #d92d20;
+
+  color: white;
+}
+
+.btn-eliminar-modal:hover {
+  background: #b42318;
+}
+
+.btn-eliminar-modal:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 650px) {
+
+  .header {
+    padding-bottom: 80px;
+  }
+
+  .header h1 {
+    font-size: 29px;
+  }
+
+  .card {
+    padding: 20px !important;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .btn-download,
+  .btn-delete {
+    flex: 1;
+  }
+
+}
